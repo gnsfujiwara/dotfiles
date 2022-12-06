@@ -40,10 +40,6 @@ XTerm.vt100.translations: #override \n\
     Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
     Shift <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY) select-start() select-end()
 
-!----------------------------------------------------------
-! URxvt
-!----------------------------------------------------------
-
 ! Base16 Black Metal
 ! Scheme author: metalelf0 (https://github.com/metalelf0)
 ! Template author: Tinted Theming (https://github.com/tinted-theming)
