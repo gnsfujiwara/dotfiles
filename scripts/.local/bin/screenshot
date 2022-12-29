@@ -1,0 +1,60 @@
+#!/bin/bash
+
+SCREENSHOT_DIR="$HOME"/Pictures/Screenshots
+
+if [ ! -d "$SCREENSHOT_DIR" ]; then
+    mkdir -p "$SCREENSHOT_DIR"
+fi
+
+clipboard() {
+    xclip -selection clipboard -t image/png
+}
+
+full() {
+    filename="$SCREENSHOT_DIR/$(date "+%-Y-%m-%d-%H%M%S")_$HOSTNAME.png"
+    shotgun -s $filename
+    clipboard < $filename
+    notify-send "Capture" "Fullscreen screenshot taken" -i "$filename"
+    echo "$filename"
+}
+
+sel() {
+    filename="$SCREENSHOT_DIR/$(date "+%-Y-%m-%d-%H%M%S")_$HOSTNAME.png"
+    selection=$(hacksaw)
+    shotgun -g $selection $filename
+    clipboard < $filename
+    notify-send "Capture" "Selection screenshot taken" -i "$filename"
+    echo "$filename"
+}
+
+active() {
+    get_active_window=$(xdotool getactivewindow)
+    if [ -z $get_active_window ]; then
+        notify-send "Capture" "No active windows"
+        return
+    fi
+
+    filename="$SCREENSHOT_DIR/$(date "+%-Y-%m-%d-%H%M%S")_$HOSTNAME.png"
+    shotgun -i $get_active_window $filename
+    clipboard < $filename
+    notify-send "Capture" "Active window screenshot taken" -i "$filename"
+    echo "$filename"
+}
+
+case "$1" in
+    full)
+        shift
+        full
+        ;;
+    sel)
+        shift
+        sel
+        ;;
+    active)
+        shift
+        active
+        ;;
+    *)
+        full
+        ;;
+esac
