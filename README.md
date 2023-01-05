@@ -8,4 +8,4 @@ I use [GNU Stow](https://www.gnu.org/software/stow/) to manage my dotfiles, make
 
 ## License
 
-[The Unlicense](./UNLICENSE)
+[WTFPL](./LICENSE)
