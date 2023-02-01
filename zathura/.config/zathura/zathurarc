@@ -1,6 +1,6 @@
 #
 # zathurarc
-# Author: gnsfujiwara (Gustavo Vinícios)
+# Author: gnsfujiwara <gnsfujiwara@disroot.org>
 #
 
 #
@@ -14,46 +14,48 @@ set selection-clipboard clipboard
 set incremental-search true
 set search-hadjust true
 
-# Autoadjust
-set adjust-open width
+# Recolor
+set recolor true
 
 #
 # Apperance
 #
 
 # Font
-set font "Cozette"
+set font "Iosevka 10"
 
-# Colors (base16-black-metal)
-set default-bg "#000000"
-set default-fg "#121212"
+# Base16 Default Dark
+# Author: Chris Kempson (http://chriskempson.com)
 
-set statusbar-fg "#999999"
-set statusbar-bg "#222222"
+set default-bg                  "#181818"
+set default-fg                  "#282828"
 
-set inputbar-bg "#000000"
-set inputbar-fg "#c1c1c1"
+set statusbar-fg                "#b8b8b8"
+set statusbar-bg                "#383838"
 
-set notification-bg "#000000"
-set notification-fg "#c1c1c1"
+set inputbar-bg                 "#181818"
+set inputbar-fg                 "#f8f8f8"
 
-set notification-error-bg "#000000"
-set notification-error-fg "#5f8787"
+set notification-bg             "#181818"
+set notification-fg             "#f8f8f8"
 
-set notification-warning-bg "#000000"
-set notification-warning-fg "#5f8787"
+set notification-error-bg       "#181818"
+set notification-error-fg       "#ab4642"
 
-set highlight-color "#a06666"
-set highlight-active-color "#888888"
+set notification-warning-bg     "#181818"
+set notification-warning-fg     "#ab4642"
 
-set completion-bg "#121212"
-set completion-fg "#888888"
+set highlight-color             "#f7ca88"
+set highlight-active-color      "#7cafc2"
 
-set completion-highlight-fg "#c1c1c1"
-set completion-highlight-bg "#888888"
+set completion-bg               "#282828"
+set completion-fg               "#7cafc2"
 
-set recolor-lightcolor "#000000"
-set recolor-darkcolor "#999999"
+set completion-highlight-fg     "#f8f8f8"
+set completion-highlight-bg     "#7cafc2"
+
+set recolor-lightcolor          "#181818"
+set recolor-darkcolor           "#e8e8e8"
 
 #
 # Mappings
