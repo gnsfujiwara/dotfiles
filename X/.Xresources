@@ -1,56 +1,28 @@
 !
 ! Xresources
-! Author: gnsfujiwara (Gustavo Vinícios)
+! Author: gnsfujiwara <gnsfujiwara@disroot.org>
 !
 
-! X11 ------------------------------------------------------
-Xcursor.theme: Simp1e
-
-! Xft ------------------------------------------------------
-Xft.dpi:       96
-Xft.antialias: true
-Xft.rgba:      rgb
-Xft.hinting:   true
-Xft.hintstyle: hintslight
-Xft.autohint:  true
-Xft.lcdfilter: lcddefault
-
-! URxvt ----------------------------------------------------
-URxvt.font:           -uw-ttyp0-medium-r-*-*-16-*-*-*-*-*-iso10646-1
-URxvt.internalBorder: 12
-URxvt.scrollBar:      false
-
-URxvt.scrollTtyOutput:   false
-URxvt.scrollTtyKeypress: true
-URxvt.scrollWithBuffer:  true
-URxvt.secondaryScreen:   true
-URxvt.secondaryScroll:   false
-URxvt.saveLines:         4096
-URxvt.urgentOnBell:      true
-URxvt.skipBuiltinGlyphs: true
-URxvt.iso14755:          false
-URxvt.iso14755_52:       false
-
-! Base16 Black Metal
-! Scheme author: metalelf0 (https://github.com/metalelf0)
+! Base16 Default Dark
+! Scheme author: Chris Kempson (http://chriskempson.com)
 ! Template author: Tinted Theming (https://github.com/tinted-theming)
 
-#define base00 #000000
-#define base01 #121212
-#define base02 #222222
-#define base03 #333333
-#define base04 #999999
-#define base05 #c1c1c1
-#define base06 #999999
-#define base07 #c1c1c1
-#define base08 #5f8787
-#define base09 #aaaaaa
-#define base0A #a06666
-#define base0B #dd9999
-#define base0C #aaaaaa
-#define base0D #888888
-#define base0E #999999
-#define base0F #444444
+#define base00 #181818
+#define base01 #282828
+#define base02 #383838
+#define base03 #585858
+#define base04 #b8b8b8
+#define base05 #d8d8d8
+#define base06 #e8e8e8
+#define base07 #f8f8f8
+#define base08 #ab4642
+#define base09 #dc9656
+#define base0A #f7ca88
+#define base0B #a1b56c
+#define base0C #86c1b9
+#define base0D #7cafc2
+#define base0E #ba8baf
+#define base0F #a16946
 
 *foreground:   base05
 #ifdef background_opacity
@@ -86,3 +58,39 @@ URxvt.iso14755_52:       false
 *color19:      base02
 *color20:      base04
 *color21:      base06
+
+! X11 ------------------------------------------------------
+Xcursor.theme: Simp1e
+
+! Xft ------------------------------------------------------
+Xft.dpi:       96
+Xft.antialias: true
+Xft.rgba:      rgb
+Xft.hinting:   true
+Xft.hintstyle: hintslight
+Xft.autohint:  true
+Xft.lcdfilter: lcddefault
+
+! URxvt ----------------------------------------------------
+URxvt.font:           xft:Iosevka Term:size=10,xft:Noto Sans Mono CJK JP
+URxvt.internalBorder: 12
+URxvt.scrollBar:      false
+
+URxvt.scrollTtyOutput:   false
+URxvt.scrollTtyKeypress: true
+URxvt.scrollWithBuffer:  true
+URxvt.secondaryScreen:   true
+URxvt.secondaryScroll:   false
+URxvt.saveLines:         4096
+URxvt.pointerBlank:      true
+URxvt.refreshRate:       0
+URxvt.geometry:          400x400
+URxvt.urgentOnBell:      true
+URxvt.iso14755:          false
+URxvt.iso14755_52:       false
+
+URxvt.perl-ext-common: default,-confirm-paste
+URxvt.perl-ext:
+
+! Nsxiv -----------------------------------------------------
+Nsxiv.bar.font: Iosevka:size=10

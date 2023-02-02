@@ -22,18 +22,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Setup keyboard
-setxkbmap -layout br
-setxkbmap -model pc104
-setxkbmap -option ctrl:nocaps,shift:both_capslock
+setxkbmap -layout br -model pc104 -option ctrl:nocaps,shift:both_capslock
 
-# Setup DPMS
+# Setup screensaver
 xset s off -dpms
 
 # Start urxvt daemon
 urxvtd -q -f -o
-
-# Set wallpaper
-xwallpaper --daemon --zoom "$HOME/Pictures/Wallpapers/Rakka.png"
 
 # Start compositor
 picom &
