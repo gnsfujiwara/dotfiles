@@ -1,0 +1,53 @@
+#
+# inputrc
+# Author: gnsfujwara <gnsfujiwara@disroot.org>
+#
+
+$include /etc/inputrc
+
+# Editing mode
+set editing-mode vi
+set keyseq-timeout 1
+
+# Vi options
+$if mode=vi
+    # Bindings
+    set keymap vi-command
+    control-l: clear-screen
+    "\e[A": history-search-backward
+    "\e[B": history-search-forward
+    "/": forward-search-history
+    "?": reverse-search-history
+    "v": ""
+
+    set keymap vi-insert
+    control-l: clear-screen
+    "\e[A": history-search-backward
+    "\e[B": history-search-forward
+    TAB: menu-complete
+    "\e[Z": menu-complete-backward
+
+    # Show current mode
+    set show-mode-in-prompt on
+
+    # Different cursor shapes for each mode
+    set vi-ins-mode-string "\1\e[6 q\2"
+    set vi-cmd-mode-string "\1\e[2 q\2"
+$endif
+
+# Bash options
+$if Bash
+    Space: magic-space
+$endif
+
+# Selection options
+set enable-bracketed-paste off
+
+# Completion options
+set show-all-if-ambiguous on
+set completion-ignore-case on
+set colored-stats on
+set visible-stats on
+set mark-symlinked-directories on
+set colored-completion-prefix on
+set menu-complete-display-prefix on
