@@ -30,6 +30,17 @@ cmp.setup({
   window = {
     documentation = cmp.config.window.bordered(),
   },
+  enabled = function()
+    -- Disable cmp if in prompt
+    local in_prompt = vim.api.nvim_buf_get_option(0, 'buftype') == 'prompt'
+    if in_prompt then
+      return false
+    end
+
+    -- Disable cmp for comments
+    local context = require 'cmp.config.context'
+    return not (context.in_treesitter_capture 'comment' == true or context.in_syntax_group 'Comment')
+  end,
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),

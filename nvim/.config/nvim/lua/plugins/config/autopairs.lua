@@ -7,7 +7,9 @@ end
 local rule = require 'nvim-autopairs.rule'
 local cond = require 'nvim-autopairs.conds'
 
-autopairs.setup()
+autopairs.setup({
+  enable_check_bracket_line = false,
+})
 
 -- Don't close single quotes in lisps
 autopairs.add_rules({

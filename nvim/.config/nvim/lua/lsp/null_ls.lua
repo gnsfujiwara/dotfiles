@@ -11,6 +11,8 @@ end
 -- Sources list
 local sources = {
   'stylua',
+  'yapf',
+  'gofmt',
 }
 
 -- mason-null-ls setup

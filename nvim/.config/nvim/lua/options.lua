@@ -25,14 +25,10 @@ local options = {
   softtabstop = 4,
   shiftwidth = 4,
   expandtab = true,
-  autoindent = true,
   smartindent = true,
 
   -- Search/Regexp
-  gdefault = true,
-  magic = true,
-  hlsearch = true,
-  incsearch = true,
+  inccommand = 'split',
   ignorecase = true,
   smartcase = true,
   wildignorecase = true,
@@ -44,8 +40,8 @@ local options = {
 
   -- Backup/Swap
   backup = false,
-  writebackup = false,
-  swapfile = false,
+  writebackup = true,
+  swapfile = true,
   autoread = true,
 }
 

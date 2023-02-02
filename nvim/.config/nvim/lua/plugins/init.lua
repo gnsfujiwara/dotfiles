@@ -12,7 +12,7 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     install_path,
   })
 
-  vim.cmd [[packadd packer.nvim]]
+  vim.cmd.packadd 'packer.nvim'
 end
 
 local packer_ok, packer = pcall(require, 'packer')
@@ -25,8 +25,8 @@ vim.api.nvim_create_autocmd('BufWritePost', {
   group = vim.api.nvim_create_augroup('PackerUserConfig', { clear = true }),
   pattern = '*/plugins/init.lua',
   callback = function()
-    vim.cmd 'source <afile>'
-    vim.cmd 'PackerCompile profile=true'
+    vim.cmd.source '<afile>'
+    vim.cmd.PackerCompile 'profile=true'
   end,
 })
 
@@ -70,6 +70,17 @@ return packer.startup(function(use)
     'nvim-lualine/lualine.nvim',
     config = function()
       require 'plugins.config.lualine'
+    end,
+  })
+
+  use({
+    'NvChad/nvim-colorizer.lua',
+    config = function()
+      require('colorizer').setup({
+        user_default_options = {
+          names = false,
+        },
+      })
     end,
   })
 
@@ -192,7 +203,7 @@ return packer.startup(function(use)
   })
 
   -- Language support
-  use 'Fymyte/rasi.vim'
+  use 'VebbNix/lf-vim'
 
   if PACKER_BOOTSTRAP then
     packer.sync()

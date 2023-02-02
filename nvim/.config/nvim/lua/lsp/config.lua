@@ -6,6 +6,8 @@ end
 -- Language servers list
 local servers = {
   'sumneko_lua',
+  'pyright',
+  'gopls',
 }
 
 -- mason-lspconfig.nvim setup
