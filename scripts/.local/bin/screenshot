@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 SCREENSHOT_DIR="$HOME"/Pictures/Screenshots
 
