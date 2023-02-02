@@ -1,0 +1,37 @@
+#
+# dunstrc
+# Author: gnsfujiwara <gnsfujiwara@disroot.org>
+#
+
+[global]
+    monitor = 0
+    font = Iosevka 10
+    markup = full
+    format = "<b>%s</b>\n%b"
+    enable_recursive_icon_lookup = true
+    icon_theme = "Papirus-Dark, Adwaita"
+    min_icon_size = 32
+    max_icon_size = 128
+
+    frame_color = "#d8d8d8"
+    separator_color = frame
+
+[base16_low]
+    msg_urgency = low
+    background = "#7cafc2"
+    foreground = "#383838"
+    timeout = 3
+
+[base16_normal]
+    msg_urgency = normal
+    background = "#181818"
+    foreground = "#d8d8d8"
+    timeout = 5
+
+[base16_critical]
+    msg_urgency = critical
+    background = "#ab4642"
+    foreground = "#383838"
+    timeout = 10
+
+# vim: ft=cfg
