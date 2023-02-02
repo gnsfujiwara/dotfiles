@@ -1,0 +1,15 @@
+#
+# git config
+# Author: gnsfujiwara <gnsfujiwara@disroot.org>
+#
+
+[user]
+    name = Gustavo Vinícios de Souza
+    email = gnsfujiwara@disroot.org
+    signingkey = 1A5D726B949BA7D2
+
+[pull]
+    rebase = true
+
+[commit]
+    gpgsign = true
