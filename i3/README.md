@@ -1,6 +1,6 @@
-# i3wm
+# i3
 
-this stow package has settings for programs i use in i3wm and for i3wm itself.
+Dotfiles for i3wm and related software.
 
 ## Requirements
 
