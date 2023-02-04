@@ -30,7 +30,7 @@ github = "kutsan/zsh-system-clipboard"
 
 [plugins.zsh-completions]
 github = 'zsh-users/zsh-completions'
-apply = ["fpath"]
+# apply = ["fpath"]
 
 [templates]
 defer = '''

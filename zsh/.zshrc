@@ -80,16 +80,10 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete
 bindkey -v '^?' backward-delete-char
 
 # Set terminal title dinamically
-case "$TERM" in (rxvt|rxvt-*|st|st-*|*xterm*|(dt|k|E)term)
-    local term_title() { print -n "\e]0;${(j: :q)@}\a" }
-    precmd() {
-        local DIR="$(pwd | sed -e "s;^$HOME;~;")"
-        term_title "$USER@$HOST:$DIR"
-    }
-    preexec() {
-        local CMD="${(j:\n:)${(f)1}}"
-        term_title "$USER@$HOST:$CMD"
-    }
+case "$TERM" in (*xterm*|rxvt*|st*|(dt|k|E)term)
+    local set_title() { print -n "\e]0;$*\a" }
+    precmd() { set_title "$USER@$HOST:$(pwd | sed -e "s;^$HOME;~;")" }
+    preexec() { set_title "$USER@$HOST:$1" }
     ;;
 esac
 

@@ -16,7 +16,9 @@ export PAGER="less"
 
 export RXVT_SOCKET="${XDG_RUNTIME_DIR:-${HOME/.urxvt}}/urxvtd-${HOST}"
 
+export GOPATH="$HOME/go"
+
 # Addtional paths
 typeset -U PATH path
-path=("$HOME/.local/bin" "$path[@]")
+path=("$HOME/.local/bin" "$(go env GOPATH)/bin" "$path[@]")
 export PATH
