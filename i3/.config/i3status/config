@@ -1,11 +1,10 @@
-# ================================================
 #
 # i3status config
 # Author: gnsfujiwara <gnsfujiwara@disroot.org>
 #
-# ================================================
 
 general {
+    output_format = "i3bar"
     colors = true
     color_good = "#a1b56c"
     color_bad = "#ab4642"
@@ -20,13 +19,13 @@ order += "time"
 
 wireless _first_ {
     format_up = "W: %essid (%quality)"
-    format_down = "W: Disconnected"
+    format_down = ""
     format_quality = "%d%s"
 }
 
 ethernet _first_ {
     format_up = "E: %ip"
-    format_down = "E: Disconnected"
+    format_down = ""
 }
 
 volume master {

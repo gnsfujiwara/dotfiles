@@ -1,8 +1,6 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
-# i3lock simple script
-
-IMG=$(mktemp -u --suffix=.png)
+IMG="$(mktemp -u --suffix=.png)"
 
 import -window root -silent "$IMG"
 convert "$IMG" -blur 0x5 "$IMG"

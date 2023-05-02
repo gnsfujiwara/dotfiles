@@ -1,0 +1,9 @@
+# Base16 Default Dark
+# Author: Chris Kempson (http://chriskempson.com)
+# Template Author: gnsfujiwara (https://github.com/gnsfujiwara)
+
+idle_fg = "#b8b8b8"
+info_fg = "#b8b8b8"
+good_fg = "#a1b56c"
+warning_fg = "#f7ca88"
+critical_fg = "#ab4642"

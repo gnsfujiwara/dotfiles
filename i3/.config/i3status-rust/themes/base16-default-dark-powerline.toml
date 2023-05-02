@@ -1,0 +1,17 @@
+# Base16 Default Dark Powerline
+# Author: Chris Kempson (http://chriskempson.com)
+# Template Author: gnsfujiwara (https://github.com/gnsfujiwara)
+
+idle_bg = "#282828"
+idle_fg = "#d8d8d8"
+info_bg = "#7cafc2"
+info_fg = "#181818"
+good_bg = "#a1b56c"
+good_fg = "#181818"
+warning_bg = "#f7ca88"
+warning_fg = "#181818"
+critical_bg = "#ab4642"
+critical_fg = "#181818"
+separator = "\ue0b2"
+separator_bg = "auto"
+separator_fg = "auto"

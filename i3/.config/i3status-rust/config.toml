@@ -1,0 +1,38 @@
+#
+# i3status-rust config
+# Author: gnsfujiwara <gnsfujiwara@disroot.org>
+#
+
+[theme]
+theme = "base16-default-dark"
+
+[icons]
+icons = "material-nf"
+
+[[block]]
+block = "music"
+format = "{ $icon $combo.str(max_w:50,rot_interval:0.25) $play |}"
+
+[[block]]
+block = "temperature"
+format = " $icon $average "
+
+[[block]]
+block = "memory"
+interval = 5
+format = " $icon $mem_used.eng(w:3,p:1i)/$mem_total.eng(w:3,p:1i) "
+
+[[block]]
+block = "cpu"
+interval = 5
+format = " $icon $utilization.eng(w:1) "
+
+[[block]]
+block = "sound" 
+driver = "auto"
+format = " $icon {$volume.eng(w:1)|} "
+
+[[block]]
+block = "time"
+interval = 1
+format = " $timestamp.datetime(f:'%a, %d %b %Y, %I:%M %p') "
