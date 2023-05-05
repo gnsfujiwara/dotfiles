@@ -10,8 +10,8 @@ if not functions -q fundle
 end
 
 fundle plugin 'jorgebucaran/autopair.fish'
-fundle plugin nickeb96/puffer-fish
-fundle plugin franciscolourenco/done
+fundle plugin 'nickeb96/puffer-fish'
+fundle plugin 'franciscolourenco/done'
 
 if status is-login
     # XDG Base Directory vars
