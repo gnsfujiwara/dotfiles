@@ -1,7 +1,7 @@
 # dunst
 
-Dusnt config file
+Dunst config file.
 
-# Requirements
+## Requirements
 
 - `dunst`
