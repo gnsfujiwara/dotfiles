@@ -1,7 +1,7 @@
 \.git
 \.gitignore
 \.gitmodules
-\.gitkeep
+^/\.gitkeep
 
 ^/README*
 ^/LICENSE*
