@@ -1,7 +1,3 @@
-# nvim
-nvim/.config/nvim/plugin/packer_compiled.lua
-
-# Backups
 *~
 *.bak
 *.old
