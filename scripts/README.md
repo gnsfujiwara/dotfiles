@@ -1,6 +1,6 @@
 # scripts
 
-Some useful scripts
+Some useful scripts.
 
 ## Requirements
 
