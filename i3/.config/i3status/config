@@ -4,7 +4,7 @@
 #
 
 general {
-    output_format = "i3bar"
+    output_format = "auto"
     colors = true
     color_good = "#a1b56c"
     color_bad = "#ab4642"

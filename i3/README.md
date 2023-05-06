@@ -1,6 +1,6 @@
 # i3
 
-Dotfiles for i3wm and related software.
+Config files for i3wm and related software.
 
 ## Requirements
 

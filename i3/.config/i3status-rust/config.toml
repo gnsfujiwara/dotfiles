@@ -11,26 +11,23 @@ icons = "material-nf"
 
 [[block]]
 block = "music"
-format = "{ $icon $combo.str(max_w:50,rot_interval:0.25) $play |}"
+format = "{ $icon $combo.str(max_w:40,rot_interval:0.5) $play |}"
 
 [[block]]
 block = "temperature"
-format = " $icon $average "
+format = " $icon $average.eng(u:deg)C "
 
 [[block]]
 block = "memory"
-interval = 5
 format = " $icon $mem_used.eng(w:3,p:1i)/$mem_total.eng(w:3,p:1i) "
 
 [[block]]
 block = "cpu"
-interval = 5
 format = " $icon $utilization.eng(w:1) "
 
 [[block]]
-block = "sound" 
-driver = "auto"
-format = " $icon {$volume.eng(w:1)|} "
+block = "sound"
+format = " $icon {$volume.eng(w:1) |}"
 
 [[block]]
 block = "time"

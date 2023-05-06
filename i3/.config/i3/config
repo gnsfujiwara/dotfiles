@@ -9,12 +9,15 @@ set $mod Mod4
 # Default terminal
 set $terminal urxvtc
 
+# Default application launcher
+set $menu i3-dmenu-desktop --dmenu="dmenu -i"
+
 # =============
 # Appearance
 # =============
 
 # Window title font
-font pango: Iosevka NF 11
+font pango: JetBrainsMono NF 10
 
 ## Base16 Default Dark
 # Scheme author: Chris Kempson (http://chriskempson.com)
@@ -68,7 +71,7 @@ bar {
     status_command i3status-rs
     position bottom
     workspace_min_width 25
-    font pango: Iosevka NF 11
+    font pango: JetBrainsMono NF 10
 
     colors {
         background $base00
@@ -95,7 +98,7 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id $terminal
 
 # Start program launcher
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i"
+bindsym $mod+d exec --no-startup-id $menu
 
 # Kill focused window
 bindsym $mod+Shift+q kill
@@ -107,7 +110,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec i3-msg exit
+bindsym $mod+Shift+e exit
 
 # Change focus
 bindsym $mod+h focus left
@@ -244,13 +247,8 @@ bindsym $mod+r mode "resize"
 
 # Workspace assignments
 assign [class="firefox"] $ws1
-assign [class="Chromium"] $ws1
-assign [class="chrome"] $ws1
-assign [class="Brave"] $ws1
 
 assign [class="Emacs"] $ws2
-assign [class="Code"] $ws2
-assign [class="code-oss"] $ws2
 
 assign [class="TelegramDesktop"] $ws3
 
@@ -266,8 +264,8 @@ for_window [window_role="task_dialog"] floating enable
 # Autostart
 # ============
 
-# Wallpaper
-exec_always --no-startup-id xwallpaper --zoom ~/Pictures/Wallpapers/Rakka_alt.png
-
-# Screenlocker
+# Auto locker
 exec --no-startup-id xss-lock --transfer-sleep-lock -- lock.sh --nofork
+
+# Wallpaper
+exec_always --no-startup-id xwallpaper --zoom ~/Pictures/Wallpapers/Lilith_Sketchy.jpg
