@@ -1,7 +1,7 @@
 # git
 
-Git and git related tools dotfiles
+Git and git related tools config files.
 
-# Requirements
+## Requirements
 
 - `git`
