@@ -1,7 +1,7 @@
 # X
 
-Dotfiles for X11 related stuff
+Config files for X11 related stuff.
 
 ## Requirements
 
-Read the dotfiles
+Read the dotfiles.

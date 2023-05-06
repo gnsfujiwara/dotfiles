@@ -1,34 +1,31 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 #
 # ~/.xinitrc
 #
 
 # Load user resources
-userresources="$HOME/.Xresources"
-
-if [ -f "$userresources" ]; then
-    xrdb -merge "$userresources"
-fi
-
-unset userresources
+[ -f "$HOME/.Xresources" ] && xrdb -merge "$HOME/.Xresources"
 
 # Source some important modules
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
     for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
         [ -x "$f" ] && . "$f"
     done
-    unset
+    unset f
 fi
 
 # Setup keyboard
 setxkbmap -layout br -model pc104 -option ctrl:nocaps,shift:both_capslock
 
-# Setup screensaver
+# Setup DPMS and screen saver
 xset s off -dpms
 
+# Setup repeat rate
+xset r rate 300 50
+
 # Start urxvt daemon
-urxvtd -q -f -o
+urxvtd -q -o -f
 
 # Start compositor
 picom &

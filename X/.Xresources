@@ -72,25 +72,42 @@ Xft.autohint:  true
 Xft.lcdfilter: lcddefault
 
 ! URxvt ----------------------------------------------------
-URxvt.font:           xft:Iosevka Term:size=10,xft:Noto Sans Mono CJK JP
-URxvt.internalBorder: 12
+URxvt.font:           xft:JetBrains Mono:size=10,xft:Noto Sans Mono CJK JP:size=10
+URxvt.letterSpace:    -1
+URxvt.internalBorder: 1
 URxvt.scrollBar:      false
 
 URxvt.scrollTtyOutput:   false
 URxvt.scrollTtyKeypress: true
 URxvt.scrollWithBuffer:  true
+URxvt.jumpScroll:        false
 URxvt.secondaryScreen:   true
 URxvt.secondaryScroll:   false
 URxvt.saveLines:         4096
 URxvt.pointerBlank:      true
-URxvt.refreshRate:       0
-URxvt.geometry:          400x400
 URxvt.urgentOnBell:      true
 URxvt.iso14755:          false
 URxvt.iso14755_52:       false
 
-URxvt.perl-ext-common: default,-confirm-paste
+URxvt.perl-ext-common: default,matcher,-confirm-paste
 URxvt.perl-ext:
 
-! Nsxiv -----------------------------------------------------
-Nsxiv.bar.font: Iosevka:size=10
+URxvt.matcher.button: 1
+URxvt.url-launcher:   /usr/bin/xdg-open
+
+! Sxiv -----------------------------------------------------
+Sxiv.font: JetBrains Mono:size=10
+
+! dmenu ----------------------------------------------------
+dmenu.font:          JetBrains Mono:size=10
+dmenu.normbgcolor:   base00
+dmenu.normfgcolor:   base04
+dmenu.selbgcolor:    base0D
+dmenu.selfgcolor:    base00
+dmenu.normhlbgcolor: base00
+dmenu.normhlfgcolor: base0A
+dmenu.selhlbgcolor:  base0D
+dmenu.selhlfgcolor:  base0A
+dmenu.centered:      1
+dmenu.lines:         10
+dmenu.border_width:  2
