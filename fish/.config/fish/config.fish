@@ -50,7 +50,7 @@ if status is-interactive
         set -x __fish_git_prompt_showcolorhints true
         set -x __fish_git_prompt_color_branch magenta
         set_color $fish_color_cwd
-        printf (prompt_pwd --dir-length=0)
+        printf (prompt_pwd --full-length-dirs=2 --dir-length=1)
         set_color normal
         fish_git_prompt
         test $last_status -ne 0 && set_color --bold red
