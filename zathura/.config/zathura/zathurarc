@@ -22,7 +22,7 @@ set recolor true
 #
 
 # Font
-set font "Iosevka 10"
+set font "JetBrains Mono 10"
 
 # Base16 Default Dark
 # Author: Chris Kempson (http://chriskempson.com)

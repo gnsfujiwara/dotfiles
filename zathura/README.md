@@ -1,7 +1,7 @@
 # zathura
 
-zathura config file
+Zathura config file.
 
-# Requirements
+## Requirements
 
 - `zathura`
