@@ -12,6 +12,7 @@ end
 fundle plugin 'jorgebucaran/autopair.fish'
 fundle plugin 'nickeb96/puffer-fish'
 fundle plugin 'franciscolourenco/done'
+fundle plugin 'danhper/fish-ssh-agent'
 
 if status is-login
     # XDG Base Directory vars
