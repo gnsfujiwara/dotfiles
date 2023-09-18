@@ -12,7 +12,6 @@ end
 fundle plugin 'jorgebucaran/autopair.fish'
 fundle plugin 'nickeb96/puffer-fish'
 fundle plugin 'franciscolourenco/done'
-fundle plugin 'danhper/fish-ssh-agent'
 
 if status is-login
     # XDG Base Directory vars
@@ -30,7 +29,7 @@ if status is-login
     set -x QT_QPA_PLATFORMTHEME qt5ct
 
     # Additional paths
-    set -gx PATH $PATH "$HOME/.local/bin" "$GOPATH/bin"
+    set -gx PATH $PATH "$HOME/.local/bin" "$GOPATH/bin" "$HOME/.rye/shims" "$HOME/.roswell/bin"
 
     # Auto start graphics server
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
@@ -42,6 +41,12 @@ if status is-interactive
     # Load plugins
     fundle init
 
+    # Direnv hook
+    direnv hook fish | source
+
+    # Theme
+    fish_config theme choose "Base16 Default Dark"
+
     # Prompt
     function fish_mode_prompt
     end
@@ -50,11 +55,19 @@ if status is-interactive
         set -l last_status $status
         set -x __fish_git_prompt_showcolorhints true
         set -x __fish_git_prompt_color_branch magenta
+        set -x __fish_git_prompt_showdirtystate true
+        set -x __fish_git_prompt_showstashstate true
+        set -x __fish_git_prompt_showuntrackedfiles true
+        set -x __fish_git_prompt_showupstream informative
+        set -x __fish_git_prompt_char_cleanstate ''
+        set -x __fish_git_prompt_char_dirtystate '!'
+        set -x __fish_git_prompt_char_stagedstate '+'
+        set -x __fish_git_prompt_char_untrackedfiles '?'
         set_color $fish_color_cwd
         printf (prompt_pwd --full-length-dirs=2 --dir-length=1)
         set_color normal
         fish_git_prompt
-        test $last_status -ne 0 && set_color --bold red
+        test $last_status -ne 0 && set_color red
         printf " λ "
         set_color normal
     end
@@ -81,3 +94,4 @@ alias rm 'rm -Iv --preserve-root'
 alias mkdir 'mkdir -pv'
 alias rmdir 'rmdir -v'
 alias xload 'xrdb -load ~/.Xresources'
+alias lf 'lfcd'
