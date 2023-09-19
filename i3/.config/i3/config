@@ -7,17 +7,17 @@
 set $mod Mod4
 
 # Default terminal
-set $terminal urxvtc
-
-# Default application launcher
-set $menu i3-dmenu-desktop
+set $terminal tym
 
 # =============
 # Appearance
 # =============
 
 # Window title font
-font pango: JetBrainsMono NF 10
+font pango:Hack Nerd Font 10
+
+# Window title align
+title_align center
 
 ## Base16 Default Dark
 # Scheme author: Chris Kempson (http://chriskempson.com)
@@ -60,9 +60,6 @@ gaps inner 5
 gaps outer 5
 # smart_gaps on
 
-# Drag modifier
-tiling_drag modifier titlebar
-
 
 # ========
 # i3bar
@@ -71,8 +68,9 @@ tiling_drag modifier titlebar
 bar {
     status_command i3status-rs
     position bottom
+    modifier none
     workspace_min_width 35
-    font pango: JetBrainsMono NF 10
+    font pango:Hack Nerd Font 10
 
     colors {
         background $base00
@@ -96,11 +94,15 @@ bar {
 # Default float modifier
 floating_modifier $mod
 
+# Default tiling drag modifier
+tiling_drag modifier titlebar
+
 # Start a terminal
 bindsym $mod+Return exec --no-startup-id $terminal
 
 # Start program launcher
-bindsym $mod+d exec --no-startup-id $menu
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 
 # Kill focused window
 bindsym $mod+Shift+q kill
@@ -162,8 +164,14 @@ bindsym $mod+a focus parent
 # Move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
-# Show scratchpad
+# Remove last window from scratchpad
 bindsym $mod+minus scratchpad show
+
+# Toggle i3bar
+bindsym $mod+Shift+b bar mode toggle
+
+# Lock using i3lock script
+bindsym $mod+Shift+x exec --no-startup-id lock.sh
 
 # Control volume with pactl
 set $refresh_i3status killall -SIGUSR1 i3status-rs
