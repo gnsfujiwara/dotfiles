@@ -7,3 +7,4 @@ Fish config files.
 - `fish`
 - `eza`
 - `zoxide`
+- `direnv`
