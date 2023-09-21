@@ -72,7 +72,7 @@ Xft.autohint:  true
 Xft.lcdfilter: lcddefault
 
 ! URxvt ----------------------------------------------------
-URxvt.font:           xft:JetBrains Mono:size=10,xft:Noto Sans Mono CJK JP:size=10
+URxvt.font:           xft:Hack:size=10,xft:Noto Sans Mono CJK JP:size=10
 URxvt.letterSpace:    -1
 URxvt.internalBorder: 1
 URxvt.scrollBar:      false
@@ -93,10 +93,10 @@ URxvt.perl-ext-common: default,-confirm-paste
 URxvt.perl-ext:
 
 ! Sxiv -----------------------------------------------------
-Sxiv.font: JetBrains Mono:size=10
+Sxiv.font: Hack:size=10
 
 ! dmenu ----------------------------------------------------
-dmenu.font:          JetBrains Mono:size=10
+dmenu.font:          Hack:size=10
 dmenu.normbgcolor:   base00
 dmenu.normfgcolor:   base04
 dmenu.selbgcolor:    base0D
@@ -108,3 +108,4 @@ dmenu.selhlfgcolor:  base0A
 dmenu.centered:      1
 dmenu.lines:         10
 dmenu.border_width:  2
+

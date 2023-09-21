@@ -25,7 +25,13 @@ xset s off -dpms
 xset r rate 300 50
 
 # Start urxvt daemon
-urxvtd -q -o -f
+# urxvtd -q -o -f
+
+# Start tym daemon
+tym --daemon >/dev/null 2>&1 &
+
+# Start xsettingsd
+xsettingsd &
 
 # Start compositor
 picom &
