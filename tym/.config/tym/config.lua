@@ -8,7 +8,7 @@ Author: gnsfujiwara <gnsfujiwara@disroot.org>
 local tym = require 'tym'
 
 tym.set_config({
-  font = 'JetBrainsMono NF 10',
+  font = 'Hack Nerd Font 10',
   scrollback_length = 4096,
   autohide = true,
   cursor_blink_mode = 'off',
