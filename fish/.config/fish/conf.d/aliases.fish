@@ -7,7 +7,7 @@
 alias mv 'mv -iv'
 alias cp 'cp -iv'
 alias ln 'ln -iv'
-alias rm 'rm -Iv --preserve-root'
+alias rm 'rm -iv'
 alias mkdir 'mkdir -pv'
 alias rmdir 'rmdir -v'
 

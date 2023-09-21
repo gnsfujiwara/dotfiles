@@ -19,8 +19,7 @@ if status is-login
     set -x QT_QPA_PLATFORMTHEME qt5ct
 
     # Additional paths
-    # set -gx PATH $PATH "$HOME/.local/bin" "$GOPATH/bin" "$HOME/.rye/shims" "$HOME/.roswell/bin"
-    fish_add_path --global --prepend "$HOME/.local/bin" "$GOPATH/bin" "$HOME/.rye/shims" "$HOME/.roswell/bin"
+    fish_add_path --global --append "$HOME/.local/bin" "$GOPATH/bin" "$HOME/.rye/shims" "$HOME/.roswell/bin"
 
     # Auto start graphics server
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
