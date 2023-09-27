@@ -15,11 +15,15 @@ if status is-login
     set -x EDITOR nvim
     set -x PAGER less
     set -x GOPATH "$HOME/.go"
+    set -x PYENV_ROOT "$HOME/.pyenv"
+    set -x LESS '--mouse -R -F'
 
     set -x QT_QPA_PLATFORMTHEME qt5ct
 
+    set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/gcr/ssh"
+
     # Additional paths
-    fish_add_path --global --append "$HOME/.local/bin" "$GOPATH/bin" "$HOME/.rye/shims" "$HOME/.roswell/bin"
+    fish_add_path --global --prepend "$HOME/.local/bin" "$GOPATH/bin" "$PYENV_ROOT/bin" "$HOME/.roswell/bin"
 
     # Auto start graphics server
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1

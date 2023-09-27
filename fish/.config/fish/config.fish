@@ -25,6 +25,10 @@ abbr n nvim
 abbr s sudo
 abbr yyy "yes |"
 
+# Pyenv setup
+pyenv init - | source
+pyenv virtualenv-init - | source
+
 # Direnv hook
 direnv hook fish | source
 
