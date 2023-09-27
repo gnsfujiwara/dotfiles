@@ -9,7 +9,7 @@ local tym = require 'tym'
 
 tym.set_config({
   font = 'Hack Nerd Font 10',
-  scrollback_length = 4096,
+  scrollback_length = 0, -- Use tmux
   autohide = true,
   cursor_blink_mode = 'off',
   width = 80,
