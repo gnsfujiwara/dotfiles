@@ -9,6 +9,9 @@ set $mod Mod4
 # Default terminal
 set $terminal tym
 
+# Default program launcher
+set $menu j4-dmenu-desktop
+
 # =============
 # Appearance
 # =============
@@ -101,8 +104,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec --no-startup-id $terminal
 
 # Start program launcher
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
+bindsym $mod+d exec --no-startup-id $menu
 
 # Kill focused window
 bindsym $mod+Shift+q kill
