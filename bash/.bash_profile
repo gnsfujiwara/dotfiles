@@ -16,11 +16,15 @@ export XDG_USER_LOCAL="$HOME/.local"
 export EDITOR='nvim'
 export PAGER='less'
 export GOPATH="$HOME/.go"
+export PYENV_ROOT="$HOME/.pyenv"
+export LESS='--mouse -R -F'
 
 export QT_QPA_PLATFORMTHEME='qt5ct'
 
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+
 # Additional paths
-export PATH="$PATH:$HOME/.local/bin:$GOPATH/bin"
+export PATH="$PATH:$HOME/.local/bin:$GOPATH/bin:$PYENV_ROOT/bin:$HOME/.roswell/bin"
 
 # Auto start graphics server
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then

@@ -175,19 +175,12 @@ bindsym $mod+Shift+b bar mode toggle
 # Lock using i3lock script
 bindsym $mod+Shift+x exec --no-startup-id lock.sh
 
-# Control volume with pactl
-set $refresh_i3status killall -SIGUSR1 i3status-rs
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
 # Control volume with wpctl
-#set $refresh_i3status killall -SIGUSR1 i3status-rs
-#bindsym XF86AudioRaiseVolume exec --no-startup-id wpctl set-volume -l 1.3 @DEFAULT_AUDIO_SINK@ 10%+ && $refresh_i3status
-#bindsym XF86AudioLowerVolume exec --no-startup-id wpctl set-volume -l 1.3 @DEFAULT_AUDIO_SINK@ 10%- && $refresh_i3status
-#bindsym XF86AudioMute exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && $refresh_i3status
-#bindsym XF86AudioMicMute exec --no-startup-id wpctl set-source-mute @DEFAULT_AUDIO_SOURCE@ toggle && $refresh_i3status
+set $refresh_i3status killall -SIGUSR1 i3status-rs
+bindsym XF86AudioRaiseVolume exec --no-startup-id wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 10%+ && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 10%- && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id wpctl set-source-mute @DEFAULT_AUDIO_SOURCE@ toggle && $refresh_i3status
 
 # Control media
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -280,3 +273,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- lock.sh --nofork
 
 # Wallpaper
 exec_always --no-startup-id xwallpaper --tile ~/Pictures/Tiles/tile_gray_lines.png
+
+# XDG Autostart
+exec --no-startup-id dex --autostart --search-paths ~/.config/autostart --environment i3

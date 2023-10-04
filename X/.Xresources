@@ -83,7 +83,7 @@ URxvt.scrollWithBuffer:  true
 URxvt.jumpScroll:        false
 URxvt.secondaryScreen:   true
 URxvt.secondaryScroll:   false
-URxvt.saveLines:         4096
+URxvt.saveLines:         0
 URxvt.pointerBlank:      true
 URxvt.urgentOnBell:      true
 URxvt.iso14755:          false
@@ -97,7 +97,8 @@ Nsxiv.bar.font:          Hack:size=10
 Nsxiv.bar.background:    base02
 Nsxiv.bar.foreground:    base04
 Nsxiv.window.background: base00
-Nsxiv.window.foreground: base0D
+Nsxiv.window.foreground: base05
+Nsxiv.mark.foreground:   base0D
 
 ! dmenu ----------------------------------------------------
 dmenu.font:          Hack:size=10
@@ -112,4 +113,3 @@ dmenu.selhlfgcolor:  base0A
 dmenu.centered:      1
 dmenu.lines:         10
 dmenu.border_width:  2
-

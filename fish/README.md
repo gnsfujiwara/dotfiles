@@ -8,3 +8,4 @@ Fish config files.
 - `eza`
 - `zoxide`
 - `direnv`
+- `pyenv` Install with: `curl https://pyenv.run | bash`

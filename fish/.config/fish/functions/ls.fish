@@ -1,3 +1,3 @@
 function ls --wraps=eza --description "List contents of directory"
-    eza --icons $argv
+    eza $argv
 end

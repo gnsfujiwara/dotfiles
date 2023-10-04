@@ -22,21 +22,48 @@ export HISTFILESIZE="$HISTSIZE"
 export HISTCONTROL='ignorespace:ignoredups:erasedups'
 export HISTTIMEFORMAT='%F %T '
 
-# Functions
+# Upload files to 0x0
 function 0x0() {
-    printf "$1\n$(curl -s -F file="@$1" http://0x0.st)\n"
+    printf "$1\n$(curl -F file="@$1" https://0x0.st)\n"
+}
+
+# Wraps ls command with eza
+function ls() {
+    eza "$@"
+}
+
+function ll() {
+    eza -lh "$@"
+}
+
+function la() {
+    eza -lAh "$@"
+}
+
+function tree() {
+    eza --tree "$@"
 }
 
 # Aliases
-alias ls='ls --group-directories-first --color=auto -F'
-alias ll='ls -lh --group-directories-first --color=auto -F'
-alias la='ls -lha --group-directories-first --color=auto -F'
-alias grep='grep -i --color=auto'
 alias mv='mv -iv'
 alias cp='cp -iv'
 alias ln='ln -iv'
-alias rm='rm -Iv --preserve-root'
+alias rm='rm -Iv'
 alias mkdir='mkdir -pv'
 alias rmdir='rmdir -v'
+alias grep='grep --color=auto'
 alias g='git'
+alias n='nvim'
+alias vim='nvim'
+alias sxiv='nsxiv'
 alias xload='xrdb -load ~/.Xresources'
+
+# Start pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# Direnv hook
+eval "$(direnv hook bash)"
+
+# Start zoxide
+eval "$(zoxide init bash)"

@@ -29,6 +29,7 @@ format = " $icon $utilization.eng(w:1) "
 [[block]]
 block = "sound"
 format = " $icon {$volume.eng(w:1) |}"
+max_vol = 100
 
 [[block]]
 block = "time"

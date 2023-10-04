@@ -12,8 +12,7 @@ tym.set_config({
   scrollback_length = 0, -- Use tmux
   autohide = true,
   cursor_blink_mode = 'off',
-  width = 80,
-  height = 24,
+  uri_schemes = 'http https file mailto irc',
 })
 
 tym.set_keymaps({

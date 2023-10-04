@@ -8,6 +8,8 @@ set selection-clipboard clipboard
 set incremental-search true
 set search-hadjust true
 set recolor true
+set recolor-keephue true
+set sandbox strict
 
 # Apperance
 set font "Hack 10"
@@ -41,13 +43,3 @@ set completion-highlight-bg     "#7cafc2"
 
 set recolor-lightcolor          "#181818"
 set recolor-darkcolor           "#e8e8e8"
-
-# Mappings
-map [normal] f toggle_fullscreen
-map [fullscreen] f toggle_fullscreen
-
-map [normal] z zoom in
-map [normal] Z zoom out
-
-map [fullscreen] z zoom in
-map [fullscreen] Z zoom out

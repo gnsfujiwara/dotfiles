@@ -1,3 +1,3 @@
 function ll --wraps=eza --description "List contents of directory using long format"
-    eza --icons -lh $argv
+    eza -lh $argv
 end

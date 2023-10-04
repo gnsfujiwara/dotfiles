@@ -25,7 +25,7 @@ abbr n nvim
 abbr s sudo
 abbr yyy "yes |"
 
-# Pyenv setup
+# Start pyenv
 pyenv init - | source
 pyenv virtualenv-init - | source
 

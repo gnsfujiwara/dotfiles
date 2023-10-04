@@ -9,8 +9,9 @@ Config files for i3wm and related software.
 - `i3status-rs`
 - `i3lock`
 - `dmenu`
-- `urxvt`
+- `tym`
 - `xwallpaper`
-- `pulseaudio` or `pipewire-pulse`
+- `pipewire-pulse`
 - `playerctl`
 - `xss-lock`
+- `dex`
