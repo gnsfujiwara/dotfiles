@@ -1,0 +1,34 @@
+#
+# Mako config
+# Author: gnsfujiwara <gnsfujiwara@disroot.org>
+#
+
+font=Iosevka NF 10
+background-color=#181818
+text-color=#b8b8b8
+border-color=#7cafc2
+width=300
+height=150
+margin=8
+max-icon-size=128
+icon-path=/usr/share/icons/Papirus-Dark:/usr/share/icons/hicolor
+default-timeout=10000
+sort=-priority
+
+on-button-left=invoke-default-action
+on-button-middle=dismiss-all
+on-button-right=dismiss
+
+[urgency=low]
+border-color=#585858
+default-timeout=5000
+
+[urgency=normal]
+border-color=#7cafc2
+default-timeout=10000
+
+[urgency=critical]
+border-color=#ab4642
+default-timeout=0
+
+# vim:ft=dosini
