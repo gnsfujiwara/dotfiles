@@ -14,6 +14,7 @@ fundle plugin 'nickeb96/puffer-fish'
 fundle plugin 'franciscolourenco/done'
 fundle plugin 'tuvistavie/fish-completion-helpers'
 fundle plugin 'pure-fish/pure'
+fundle plugin 'laughedelic/fish_logo'
 
 # Load plugins
 if status is-interactive

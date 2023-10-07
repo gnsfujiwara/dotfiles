@@ -73,7 +73,7 @@ Xft.lcdfilter: lcddefault
 
 ! URxvt ----------------------------------------------------
 URxvt.font:           xft:Hack:size=10,xft:Noto Sans Mono CJK JP:size=10
-URxvt.letterSpace:    -1
+! URxvt.letterSpace:    -1
 URxvt.internalBorder: 1
 URxvt.scrollBar:      false
 
@@ -99,6 +99,7 @@ Nsxiv.bar.foreground:    base04
 Nsxiv.window.background: base00
 Nsxiv.window.foreground: base05
 Nsxiv.mark.foreground:   base0D
+
 
 ! dmenu ----------------------------------------------------
 dmenu.font:          Hack:size=10
