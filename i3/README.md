@@ -6,7 +6,6 @@ Config files for i3wm and related software.
 
 - `i3`
 - `i3status`
-- `i3status-rs`
 - `i3lock`
 - `dmenu`
 - `tym`
