@@ -10,6 +10,7 @@ Config files for [sway](https://github.com/swaywm/sway)
 - `swaybg`
 - `foot`
 - `fuzzel`
+- `i3status-rust`
 - `pipewire-pulse`
 - `playerctl`
 - `dex`
