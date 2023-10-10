@@ -1,6 +1,6 @@
 # sway
 
-Config files for [sway](https://github.com/swaywm/sway)
+Config files for [sway](https://github.com/swaywm/sway) and related software.
 
 ## Requirements
 
