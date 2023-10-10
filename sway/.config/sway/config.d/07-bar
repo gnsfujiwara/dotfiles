@@ -1,0 +1,28 @@
+#
+# Sway bar
+# Author: gnsfujiwara <gnsfujiwara@disroot.org>
+#
+
+bar {
+    status_command i3status-rs
+    position bottom
+    modifier none
+    workspace_min_width 35
+    icon_theme Papirus-Dark
+    font pango:Iosevka NF 10
+
+    colors {
+        background $base00
+        separator  $base01
+        statusline $base04
+
+        # State             Border  BG      Text
+        focused_workspace   $base0D $base0D $base00
+        active_workspace    $base03 $base03 $base00
+        inactive_workspace  $base01 $base01 $base05
+        urgent_workspace    $base08 $base08 $base00
+        binding_mode        $base0A $base0A $base00
+    }
+}
+
+# vim:ft=swayconfig

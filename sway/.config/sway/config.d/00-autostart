@@ -1,0 +1,29 @@
+#
+# Sway autostart
+# Author: gnsfujiwara <gnsfujiwara@disroot.org>
+#
+
+# Foot server
+exec foot --server
+
+# Swayidle for automatic screen locking
+exec swayidle -w \
+     timeout 2400 'swaylock -f -c ffffff' \
+     timeout 2405 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+     before-sleep 'swaylock -f -c ffffff'
+
+# Gtk settings
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Materia-dark'
+    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+    gsettings set $gnome-schema cursor-theme 'Simp1e'
+    gsettings set $gnome-schema font-name 'Roboto Medium 9.75'
+    gsettings set $gnome-schema monospace-font-name 'Roboto Mono 10'
+    gsettings set $gnome-schema font-antialiasing 'rgba'
+}
+
+# Dex for XDG autostart
+exec dex --autostart --environment sway
+
+# vim:ft=swayconfig

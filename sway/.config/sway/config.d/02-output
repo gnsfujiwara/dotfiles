@@ -1,0 +1,9 @@
+#
+# Sway output
+# Author: gnsfujiwara <gnsfujiwara@disroot.org>
+#
+
+# Wallpaper
+output * bg ~/Pictures/Wallpapers/tile_gray_lines.png tile
+
+# vim:ft=swayconfig

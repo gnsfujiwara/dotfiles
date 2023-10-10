@@ -1,0 +1,15 @@
+#
+# Sway input
+# Author: gnsfujiwara <gnsfujiwara@disroot.org>
+#
+
+# Keyboard settings
+input * {
+    xkb_layout "br"
+    xkb_model "pc104"
+    xkb_options "ctrl:nocaps,shift:both_capslock"
+    repeat_delay 300
+    repeat_rate 50
+}
+
+# vim:ft=swayconfig
