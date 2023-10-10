@@ -72,7 +72,7 @@ Xft.autohint:  true
 Xft.lcdfilter: lcddefault
 
 ! URxvt ----------------------------------------------------
-URxvt.font:           xft:Hack:size=10,xft:Noto Sans Mono CJK JP:size=10
+URxvt.font:           xft:IosevkaTerm NF:size=11,xft:Noto Sans Mono CJK JP:size=11
 ! URxvt.letterSpace:    -1
 URxvt.internalBorder: 1
 URxvt.scrollBar:      false
@@ -93,7 +93,7 @@ URxvt.perl-ext-common: default,-confirm-paste
 URxvt.perl-ext:
 
 ! Nsxiv ----------------------------------------------------
-Nsxiv.bar.font:          Hack:size=10
+Nsxiv.bar.font:          Iosevka NF:size=11
 Nsxiv.bar.background:    base02
 Nsxiv.bar.foreground:    base04
 Nsxiv.window.background: base00
@@ -102,7 +102,7 @@ Nsxiv.mark.foreground:   base0D
 
 
 ! dmenu ----------------------------------------------------
-dmenu.font:          Hack:size=10
+dmenu.font:          Iosevka NF:size=11
 dmenu.normbgcolor:   base00
 dmenu.normfgcolor:   base04
 dmenu.selbgcolor:    base0D

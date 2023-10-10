@@ -12,7 +12,7 @@ set recolor-keephue true
 set sandbox strict
 
 # Apperance
-set font "Hack 10"
+set font "Iosevka NF 11"
 
 set default-bg                  "#181818"
 set default-fg                  "#282828"

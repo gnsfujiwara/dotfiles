@@ -17,7 +17,7 @@ set $menu i3-dmenu-desktop
 # =============
 
 # Window title font
-font pango:Hack Nerd Font 10
+font pango:Iosevka NF 11
 
 # Window title align
 title_align center
@@ -73,7 +73,7 @@ bar {
     position bottom
     modifier none
     workspace_min_width 35
-    font pango:Hack Nerd Font 10
+    font pango:Iosevka NF 11
 
     colors {
         background $base00
