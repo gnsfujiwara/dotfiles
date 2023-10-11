@@ -9,7 +9,6 @@ set incremental-search true
 set search-hadjust true
 set recolor true
 set recolor-keephue true
-set sandbox strict
 
 # Apperance
 set font "Iosevka NF 11"
