@@ -7,5 +7,6 @@ Fish config files.
 - `fish`
 - `eza`
 - `zoxide`
+- `starship`
 - `direnv`
 - `pyenv` Install with: `curl https://pyenv.run | bash`
