@@ -31,6 +31,7 @@ pyenv virtualenv-init - | source
 
 # Start starship
 starship init fish | source
+
 # Direnv hook
 direnv hook fish | source
 

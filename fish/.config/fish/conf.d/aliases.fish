@@ -13,6 +13,5 @@ alias rmdir 'rmdir -v'
 
 # Misc
 alias xload 'xrdb -load ~/.Xresources'
-alias lf 'lfcd'
 alias sxiv 'nsxiv'
 alias vim 'nvim'
