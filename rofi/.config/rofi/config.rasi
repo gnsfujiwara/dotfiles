@@ -1,0 +1,10 @@
+configuration {
+    display-drun: "Applications:";
+    modi: "window,run,ssh,drun";
+    display-window: "Windows:";
+    drun-display-format: "{name}";
+    font: "Iosevka NF 11";
+    icon-theme: "Papirus-Dark";
+}
+
+@theme "base16-default-dark"
