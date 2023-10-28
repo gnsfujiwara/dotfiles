@@ -9,10 +9,12 @@ local tym = require("tym")
 
 tym.set_config({
 	font = "IosevkaTerm NF 11",
-	scrollback_length = 0, -- Use tmux
+	scrollback_length = 4096,
 	autohide = true,
 	cursor_blink_mode = "off",
 	uri_schemes = "http https file mailto irc",
+	padding_horizontal = 8,
+	padding_vertical = 8,
 })
 
 tym.set_keymaps({

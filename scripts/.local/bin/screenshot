@@ -7,7 +7,7 @@ check_dependency() {
     fi
 }
 
-for dep in shotgun hacksaw xclip xdotool dmenu notify-send xdg-user-dir; do
+for dep in shotgun hacksaw xclip xdotool rofi notify-send xdg-user-dir; do
     check_dependency "$dep"
 done
 
@@ -42,7 +42,7 @@ active() {
 full_copy() {
     filename="$(mktemp -u --suffix=.png)"
     shotgun -s "$filename" &&
-        clipboard < "$filename" &&
+        clipboard <"$filename" &&
         notify-send "Capture" "Fullscreen screenshot saved in clipboard" -i "$filename" &&
         rm "$filename"
 }
@@ -50,7 +50,7 @@ full_copy() {
 sel_copy() {
     filename="$(mktemp -u --suffix=.png)"
     shotgun -g "$(hacksaw)" "$filename" &&
-        clipboard < "$filename" &&
+        clipboard <"$filename" &&
         notify-send "Capture" "Selection screenshot saved in clipboard" -i "$filename" &&
         rm "$filename"
 }
@@ -58,12 +58,12 @@ sel_copy() {
 active_copy() {
     filename="$(mktemp -u --suffix=.png)"
     shotgun -i "$(xdotool getactivewindow)" "$filename" &&
-        clipboard < "$filename" &&
+        clipboard <"$filename" &&
         notify-send "Capture" "Active window screenshot saved in clipboard" -i "$filename" &&
         rm "$filename"
 }
 
-case "$(printf "Full Screenshot\\nSelection Screenshot\\nActive Window Screenshot\\nFull Screenshot (copy)\\nSelection Screenshot (copy)\\nActive Window Screenshot (copy)" | dmenu -i)" in
+case "$(printf "Full Screenshot\\nSelection Screenshot\\nActive Window Screenshot\\nFull Screenshot (copy)\\nSelection Screenshot (copy)\\nActive Window Screenshot (copy)" | rofi -dmenu -l 6)" in
     "Full Screenshot")
         sleep 0.5
         full

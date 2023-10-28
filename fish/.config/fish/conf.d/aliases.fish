@@ -13,5 +13,8 @@ alias rmdir 'rmdir -v'
 
 # Misc
 alias xload 'xrdb -load ~/.Xresources'
-alias sxiv 'nsxiv'
-alias vim 'nvim'
+alias sxiv nsxiv
+alias vim nvim
+alias ffmpeg 'ffmpeg -hide_banner'
+alias ffprobe 'ffprobe -hide_banner'
+alias ffplay 'ffplay -hide_banner'

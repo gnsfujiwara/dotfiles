@@ -12,18 +12,17 @@ if status is-login
     set -x XDG_USER_LOCAL "$HOME/.local"
 
     # Misc env vars
-    set -x EDITOR 'nvim'
-    set -x PAGER 'less'
+    set -x EDITOR nvim
+    set -x PAGER less
+    set -x LESS '--mouse -R -F -J -M'
+    set -x TERMINAL tym
     set -x GOPATH "$HOME/.go"
     set -x PYENV_ROOT "$HOME/.pyenv"
-    set -x LESS '--mouse -R -F'
-
-    set -x QT_QPA_PLATFORMTHEME 'qt5ct'
-
+    set -x QT_QPA_PLATFORMTHEME qt5ct
     set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/gcr/ssh"
 
     # Additional paths
-    fish_add_path --global --prepend "$HOME/.local/bin" "$GOPATH/bin" "$PYENV_ROOT/bin" "$HOME/.roswell/bin"
+    fish_add_path --global --prepend "$HOME/.local/bin" "$GOPATH/bin" "$PYENV_ROOT/bin"
 
     # Auto start graphics server
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1

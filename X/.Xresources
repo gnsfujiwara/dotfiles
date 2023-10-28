@@ -100,7 +100,6 @@ Nsxiv.window.background: base00
 Nsxiv.window.foreground: base05
 Nsxiv.mark.foreground:   base0D
 
-
 ! dmenu ----------------------------------------------------
 dmenu.font:          Iosevka NF:size=11
 dmenu.normbgcolor:   base00

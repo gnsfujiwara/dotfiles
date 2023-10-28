@@ -10,7 +10,7 @@ set $mod Mod4
 set $terminal tym
 
 # Default program launcher
-set $menu i3-dmenu-desktop
+set $menu "rofi -show drun -show-icons"
 
 # =============
 # Appearance
