@@ -3,7 +3,7 @@ configuration {
     modi: "window,run,ssh,drun";
     display-window: "Windows:";
     drun-display-format: "{name}";
-    font: "Iosevka NF 11";
+    font: "JetBrainsMono NF 10";
     icon-theme: "Papirus-Dark";
 }
 

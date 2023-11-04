@@ -11,7 +11,7 @@ set recolor true
 set recolor-keephue true
 
 # Apperance
-set font "Iosevka NF 11"
+set font "JetBrainsMono NF 10"
 
 set default-bg                  "#181818"
 set default-fg                  "#282828"

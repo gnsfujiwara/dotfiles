@@ -9,7 +9,7 @@ bar {
     modifier none
     workspace_min_width 35
     icon_theme Papirus-Dark
-    font pango:Iosevka NF 11
+    font pango:JetBrainsMono NF 10
 
     colors {
         background $base00

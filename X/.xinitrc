@@ -28,7 +28,7 @@ xset r rate 300 50
 # urxvtd -q -o -f
 
 # Start tym daemon
-tym --daemon >/dev/null 2>&1 &
+# tym --daemon >/dev/null 2>&1 &
 
 # Start xsettingsd
 xsettingsd &

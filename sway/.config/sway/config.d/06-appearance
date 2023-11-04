@@ -4,7 +4,7 @@
 #
 
 # Window title font
-font pango:Iosevka NF 11
+font pango:JetBrainsMono NF 10
 
 # Window title align
 title_align center

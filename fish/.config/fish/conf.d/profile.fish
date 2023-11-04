@@ -4,6 +4,9 @@
 #
 
 if status is-login
+    # Source global profile with bass
+    bass source /etc/profile
+
     # XDG Base Directory vars
     set -x XDG_CONFIG_HOME "$HOME/.config"
     set -x XDG_CACHE_HOME "$HOME/.cache"
@@ -15,14 +18,13 @@ if status is-login
     set -x EDITOR nvim
     set -x PAGER less
     set -x LESS '--mouse -R -F -J -M'
-    set -x TERMINAL tym
-    set -x GOPATH "$HOME/.go"
+    set -x TERMINAL st
     set -x PYENV_ROOT "$HOME/.pyenv"
     set -x QT_QPA_PLATFORMTHEME qt5ct
     set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/gcr/ssh"
 
     # Additional paths
-    fish_add_path --global --prepend "$HOME/.local/bin" "$GOPATH/bin" "$PYENV_ROOT/bin"
+    fish_add_path --global --append "$HOME/.local/bin" "$GOPATH/bin" "$PYENV_ROOT/bin"
 
     # Auto start graphics server
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1

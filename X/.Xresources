@@ -59,7 +59,7 @@
 *color20:      base04
 *color21:      base06
 
-! X11 ------------------------------------------------------
+! Xcursor ------------------------------------------------------
 Xcursor.theme: Simp1e
 
 ! Xft ------------------------------------------------------
@@ -72,7 +72,7 @@ Xft.autohint:  true
 Xft.lcdfilter: lcddefault
 
 ! URxvt ----------------------------------------------------
-URxvt.font:           xft:IosevkaTerm NF:size=11,xft:Noto Sans Mono CJK JP:size=11
+URxvt.font:           xft:JetBrainsMono NF:size=10,xft:Noto Sans Mono CJK JP:size=10
 ! URxvt.letterSpace:    -1
 URxvt.internalBorder: 1
 URxvt.scrollBar:      false
@@ -92,8 +92,13 @@ URxvt.iso14755_52:       false
 URxvt.perl-ext-common: default,-confirm-paste
 URxvt.perl-ext:
 
+! st -------------------------------------------------------
+st.font:     JetBrainsMono NF:size=10
+st.borderpx: 8
+st.alpha:    1.0
+
 ! Nsxiv ----------------------------------------------------
-Nsxiv.bar.font:          Iosevka NF:size=11
+Nsxiv.bar.font:          JetBrainsMono NF:size=10
 Nsxiv.bar.background:    base02
 Nsxiv.bar.foreground:    base04
 Nsxiv.window.background: base00
@@ -101,7 +106,7 @@ Nsxiv.window.foreground: base05
 Nsxiv.mark.foreground:   base0D
 
 ! dmenu ----------------------------------------------------
-dmenu.font:          Iosevka NF:size=11
+dmenu.font:          JetBrainsMono NF:size=10
 dmenu.normbgcolor:   base00
 dmenu.normfgcolor:   base04
 dmenu.selbgcolor:    base0D
