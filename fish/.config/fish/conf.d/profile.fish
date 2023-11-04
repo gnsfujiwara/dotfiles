@@ -19,6 +19,8 @@ if status is-login
     set -x PAGER less
     set -x LESS '--mouse -R -F -J -M'
     set -x TERMINAL st
+    set -x GOPATH "$HOME/.go"
+    set -x GOFLAGS "-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
     set -x PYENV_ROOT "$HOME/.pyenv"
     set -x QT_QPA_PLATFORMTHEME qt5ct
     set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/gcr/ssh"
