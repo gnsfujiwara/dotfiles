@@ -31,4 +31,4 @@ default-timeout=10000
 border-color=#ab4642
 default-timeout=0
 
-# vim:ft=dosini
+# vim:ft=cfg

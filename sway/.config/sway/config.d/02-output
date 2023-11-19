@@ -4,6 +4,6 @@
 #
 
 # Wallpaper
-output * bg ~/Pictures/Wallpapers/tile_gray_lines.png tile
+output * bg ~/Pictures/Wallpapers/Artoria_Pendragon.png fill
 
 # vim:ft=swayconfig

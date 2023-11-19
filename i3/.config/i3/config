@@ -70,7 +70,9 @@ gaps outer 5
 
 bar {
     status_command i3status-rs
-    position bottom
+    position top
+    padding 3px 0 3px
+    tray_padding 6px
     modifier none
     workspace_min_width 35
     font pango:JetBrainsMono NF 10
@@ -272,7 +274,7 @@ for_window [window_role="task_dialog"] floating enable
 exec --no-startup-id xss-lock --transfer-sleep-lock -- lock.sh --nofork
 
 # Wallpaper
-exec_always --no-startup-id xwallpaper --tile ~/Pictures/Tiles/tile_gray_lines.png
+exec_always --no-startup-id xwallpaper --zoom ~/Pictures/Wallpapers/Artoria_Pendragon.png
 
 # XDG Autostart
 exec --no-startup-id dex --autostart --search-paths ~/.config/autostart --environment i3

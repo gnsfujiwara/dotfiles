@@ -5,7 +5,9 @@
 
 bar {
     status_command i3status-rs
-    position bottom
+    position top
+    height 30
+    tray_padding 6px
     modifier none
     workspace_min_width 35
     icon_theme Papirus-Dark
