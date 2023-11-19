@@ -4,8 +4,8 @@
 #
 
 if status is-login
-    # Source global profile with bass
-    bass source /etc/profile
+    # Source global profile with replay.fish
+    replay source /etc/profile
 
     # XDG Base Directory vars
     set -x XDG_CONFIG_HOME "$HOME/.config"

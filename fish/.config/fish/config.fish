@@ -24,10 +24,11 @@ abbr g git
 abbr n nvim
 abbr s sudo
 abbr yyy "yes |"
+abbr sctl "sudo systemctl"
 
 # Start pyenv
-pyenv init - | source
-pyenv virtualenv-init - | source
+# pyenv init - | source
+# pyenv virtualenv-init - | source
 
 # Start starship
 starship init fish | source
